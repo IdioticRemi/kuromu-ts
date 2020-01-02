@@ -1,60 +1,43 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-app>
+        <v-app-bar
+                app
+                color="pink accent-1"
+                dark
+        >
+            <div class="d-flex align-center">
+                <h2>
+                    Kuromu
+                </h2>
+            </div>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+            <v-spacer/>
 
-      <v-spacer></v-spacer>
+            <v-btn
+                    v-bind:href="inviteURL"
+                    target="blank"
+                    text
+            >
+                <span class="mr-2">Login</span>
+                <v-icon>mdi-fingerprint</v-icon>
+            </v-btn>
+        </v-app-bar>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+        <v-content>
+            <RouterView/>
+        </v-content>
+    </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
-export default {
-  name: 'App',
+    export default {
+        name: 'App',
+        data() {
+            return  {
+                inviteURL: "https://discordapp.com/oauth2/authorize?client_id=584053340384657438&permissions=8&scope=bot"
+            }
+        }
+    };
 
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-};
 </script>
