@@ -1,0 +1,37 @@
+{
+  "name": "kuromu",
+  "version": "1.0.0",
+  "description": "A powerful discord.js bot running with TypeScript",
+  "main": "dist/src/KuromuSharder.js",
+  "author": "Kizuru",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "pm2:delete": "pm2 delete Kuromu",
+    "pm2:logs": "pm2 logs Kuromu --lines=200",
+    "pm2:restart": "pm2 restart Kuromu",
+    "pm2:start": "pm2 start dist/KuromuSharder.js --name=\"Kuromu\"",
+    "pm2:stop": "pm2 stop Kuromu",
+    "pm2:reset": "pm2 reset Kuromu",
+    "start": "tsc && node dist/KuromuSharder.js",
+    "update": "rm -rf node_modules && yarn",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "discord.js": "discordjs/discord.js",
+    "klasa": "dirigeants/klasa#settings",
+    "klasa-dashboard-hooks": "Kizuru/klasa-dashboard-hooks",
+    "kurasuta": "^1.1.6",
+    "mongodb": "^3.4.1",
+    "node-opus": "^0.3.3",
+    "prism-media": "Kizuru/prism-media",
+    "simple-youtube-api": "^5.2.1",
+    "ytdl-core-discord": "Kizuru/ytdl-core-discord"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.2",
+    "@types/node-fetch": "^2.5.4",
+    "@types/ws": "^6.0.4",
+    "typescript": "^3.7.4"
+  }
+}
