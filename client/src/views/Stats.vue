@@ -7,12 +7,16 @@
 <script>
     export default {
         name: "Stats",
-        data () {
-            stats: []
+        data() {
+            return {
+                stats: []
+            }
         },
-        methods: {
-            getLatestStats() {
-                this.stats
+        methods() {
+            return {
+                getApplicationData() {
+
+                }
             }
         }
     }
