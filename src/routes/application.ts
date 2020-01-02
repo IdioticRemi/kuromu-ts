@@ -18,6 +18,7 @@ export default class extends Route {
             users: this.client.users.size,
             guilds: this.client.guilds.size,
             channels: this.client.channels.size,
+            clusters: this.client.shard.clusterCount,
             shards: this.client.options.shardCount,
             uptime: Duration.toNow(Date.now() - (process.uptime() * 1000)),
             latency: this.client.ws.ping.toFixed(0),
