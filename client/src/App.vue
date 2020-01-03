@@ -3,7 +3,9 @@
         <AppBarComponent/>
 
         <v-content>
-            <RouterView/>
+            <v-container>
+                <RouterView/>
+            </v-container>
         </v-content>
     </v-app>
 </template>
@@ -15,7 +17,10 @@
         name: 'App',
         components: {
             AppBarComponent
-        }
+        },
+        created () {
+            this.$vuetify.theme.dark = true
+        },
     };
 
 </script>

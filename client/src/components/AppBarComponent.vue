@@ -1,9 +1,18 @@
 <template>
     <v-app-bar app color="pink accent-1" dark>
         <div class="d-flex align-center">
-            <h2>
-                Kuromu
-            </h2>
+            <v-img
+                v-bind:src="avatarURL"
+                style="border-radius: 10px"
+                width="40px"
+            />
+
+            <v-btn text to="/" class="ms-2">
+                <span>Kuromu</span>
+            </v-btn>
+            <v-btn text to="/stats" class="ms-2">
+                <span>Stats</span>
+            </v-btn>
         </div>
 
         <v-spacer/>
@@ -24,7 +33,8 @@
         name: "AppBarComponent",
         data() {
             return {
-                inviteURL: "https://discordapp.com/oauth2/authorize?client_id=584053340384657438&permissions=8&scope=bot"
+                inviteURL: "https://discordapp.com/oauth2/authorize?client_id=584053340384657438&permissions=8&scope=bot",
+                avatarURL: "https://cdn.discordapp.com/avatars/584053340384657438/eba599abe5049089cdd6ffddefa9facc.webp"
             }
         }
     }
